@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Flight List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flight Id</th>
+            <th>Flight Source</th>
+            <th>Flight Destination</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Date</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of flights | async">
+            <td>{{ f.fNumber }}</td>
+            <td>{{ f.source }}</td>
+            <td>{{ f.destination }}</td>
+            <td>{{ f.departure }}</td>
+            <td>{{ f.arrival }}</td>
+            <td>{{ newdate | date:'yyyy-MM-dd' }}</td>
+            <td>{{ f.duration +' '+ min }}</td>
+            
+            <td>
+                <!--<a class="btn btn-success" href="FlightDetails(f.fNumber)" role="button">Select Flight</a>-->
+                <button (click)="FlightDetails(f.fNumber)" class="btn btn-secondary" style="margin-left: 10px">Select Flight</button>
+                <!--<button (click)="productDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Details</button>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

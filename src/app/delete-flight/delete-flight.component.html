@@ -1,0 +1,19 @@
+<div class="container col-lg-6">
+    <h3>Delete Flight</h3>
+    <div [hidden]="submitted" style="width: 400px;">
+      <form ngNativeValidate>
+        <div class="form-group">
+          <label for="name">Flight Number</label>
+          <br><br>
+          <input type="text" class="form-control" id="fNumber" required [(ngModel)]="products.fNumber" name="fNumber">
+        </div>
+     
+        <br>
+        <button (click)="deleteProduct(products.fNumber)" class="btn btn-success">Delete</button>
+        <br><br>
+        <a class="btn btn-success" href="addflight" role="button">Add Flight</a>
+      </form>
+    </div>
+     
+    
+    </div>

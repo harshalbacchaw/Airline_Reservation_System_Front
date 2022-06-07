@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav me-auto">
+      <img class="card-img" src="/assets/images/Air-India-logo.png" height="80px" width="80px">
+    </ul>
+
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a routerLink="/" class="clickme info" routerLinkActive="active">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="about" class="clickme info" routerLinkActive="active">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="contact" class="clickme info" routerLinkActive="active">Contact </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ms-auto">
+  
+      <li class="nav-item">
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="adminlogin" class="clickme info" routerLinkActive="active">Admin Login</a>
+      </li>
+
+      <li class="nav-item">
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="clickme info" routerLinkActive="active">User Login</a>
+      </li>
+  
+      <li class="nav-item">
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="register" class="clickme info" routerLinkActive="active">Register</a>
+      </li>
+
+      <li class="nav-item">
+        <a *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn" routerLink="addflight" class="clickme info" routerLinkActive="active">Add Flight</a>
+      </li>
+
+      <li class="nav-item">
+        <a *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn" routerLink="deleteflight" class="clickme info" routerLinkActive="active">Delete Flight</a>
+      </li>
+
+      <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="clickme info" routerLinkActive="active">Logout</a>
+      </li>      
+    </ul>
+  </nav>

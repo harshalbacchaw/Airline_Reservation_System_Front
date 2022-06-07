@@ -1,0 +1,85 @@
+<div class="container">
+<h3>Add Flight</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()" ngNativeValidate>
+    <!--<div class="form-group">
+      <label for="name">Flight Number</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="product.flightnumber" name="flightnumber">
+    </div>-->
+ 
+    <div class="form-group">
+        <label for="name">Source</label>
+        <input type="text" class="form-control" id="source" required [(ngModel)]="flight.source" name="source">
+    </div>
+
+    <!--<div class="form-group">
+      <label>Source</label>
+      <select class="custom-select d-block w-100" formControlName="source" [ngClass]="{ 'is-invalid': submitted && f.source.errors }">
+          <option value="">Choose...</option>
+          <option *ngFor="let source of City" [ngValue]="source">{{source}}</option>
+       </select>
+      <div *ngIf="submitted && f.source.errors" class="invalid-feedback">
+          <div *ngIf="f.source.errors.required">Source is required</div>
+      </div>
+    </div>-->
+
+    <!--<div class="form-group">
+      <label>Destination</label>
+      <select class="custom-select d-block w-100" formControlName="destination" [ngClass]="{ 'is-invalid': submitted && f.destination.errors }">
+          <option value="">Choose...</option>
+          <option *ngFor="let destination of City" [ngValue]="destination">{{destination}}</option>
+       </select>
+      <div *ngIf="submitted && f.destination.errors" class="invalid-feedback">
+          <div *ngIf="f.destination.errors.required">Destination is required</div>
+      </div>
+    </div>-->
+ 
+    <div class="form-group">
+        <label for="name">Destination</label>
+        <input type="text" class="form-control" id="destination" required [(ngModel)]="flight.destination" name="destination">
+    </div>
+ 
+    <div class="form-group">
+        <label for="name">Departure Time</label>
+        <input type="time" class="form-control" id="departure" required [(ngModel)]="flight.departure" name="departure">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Arrival Time</label>
+        <input type="time" class="form-control" id="arrival" required [(ngModel)]="flight.arrival" name="arrival">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date Of Departure</label>
+      <input type="date" class="form-control" id="date" required [(ngModel)]="flight.date" name="date">
+  </div>
+
+    <div class="form-group">
+        <label for="name">Duration</label>
+        <input type="text" class="form-control" id="duration" required [(ngModel)]="flight.duration" name="duration">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Economy Price</label>
+      <input type="text" class="form-control" id="duration" required [(ngModel)]="flight.economy" name="economy">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Buiseness Price</label>
+      <input type="text" class="form-control" id="duration" required [(ngModel)]="flight.buiseness" name="buiseness">
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-success">Add</button>
+    <br><br>
+    <a class="btn btn-success" href="deleteflight" role="button">Delete Flight</a>
+    <br><br>
+    <a class="btn btn-success" href="updateflight" role="button">update Flight</a>
+  </form>
+  
+</div>
+ 
+<!--<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>-->
+</div>

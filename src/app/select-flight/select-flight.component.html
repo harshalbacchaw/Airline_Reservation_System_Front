@@ -1,0 +1,56 @@
+<div class="container text-dark text-center">
+    <br>
+    <div class="row">
+        <div class="col-md-6 p-3 text-dark bg-light">
+            <div *ngIf="flight">
+                <div>
+                    <label><b>Flight Id: </b></label> {{flight.fNumber}}
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <label><b>Flight Source: </b></label> {{flight.source}}
+                      </div>
+                      <div class="col">
+                        <label><b>Flight Destination: </b></label> {{flight.destination}}
+                      </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label><b>Date Of Departure: </b></label> {{newdate1}}
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <label><b>Flight Departure: </b></label> {{flight.departure}}
+                      </div>
+                      <div class="col">
+                        <label><b>Flight Arrival: </b></label> {{flight.arrival }}
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 p-3 bg-light">
+            <div>
+                <h6>Economy</h6>
+                <label><b>Economy Class Ticket: </b></label> {{flight.economy}}
+            </div>
+        </div> 
+
+        <div class="col-md-3 p-3 bg-light">
+            <div>
+                <h6>Buiseness</h6>
+                <label><b>Buiseness Class Ticket: </b></label> {{flight.buiseness}}
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container" style="margin-left: 500px;">
+    <a class="btn btn-dark" href="bookflight" role="button">Book Flight</a>
+</div>

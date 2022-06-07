@@ -1,0 +1,31 @@
+<h3>Add Booking  Details</h3>
+<br>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name as on Government Id</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="passportNo">Passport Number</label>
+        <input type="text" class="form-control" id="passportNo" required [(ngModel)]="user.passportNo" name="passportNo">
+    </div>
+
+    <div class="form-group">
+        <label for="passengerNo">Number Of Passengers</label>
+        <input type="number" class="form-control" id="passengerNo" required [(ngModel)]="user.passengerNo" name="passengerNo">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success" style="margin-left: 500px;">Book</button>
+  </form>
+</div>
+
+
+
+
+
+
+<!--<div class="container" style="margin-left: 500px;">
+    <a class="btn btn-dark" href="bookingdetails" role="button">Book</a>
+</div>-->

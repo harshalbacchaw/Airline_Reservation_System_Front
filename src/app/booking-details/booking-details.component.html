@@ -1,0 +1,73 @@
+<div class="row">
+<div class="col-md-5 text-dark">
+    <br>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <b>Name Of Passenger</b> 
+          </div>
+          <div class="col">
+            {{name1}}
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <b>Passport Number</b>
+          </div>
+          <div class="col">
+            {{passportNo1}}
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            <b>Number Of Passengers</b>
+          </div>
+          <div class="col">
+            {{passengerNo1}}
+          </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<br><br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h5>Flight Selected</h5>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flight Id</th>
+            <th>Flight Source</th>
+            <th>Flight Destination</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Date</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of flights | async">
+            <td>{{ f.fNumber }}</td>
+            <td>{{ f.source }}</td>
+            <td>{{ f.destination }}</td>
+            <td>{{ f.departure }}</td>
+            <td>{{ f.arrival }}</td>
+            <td>{{ newdate1 | date:'yyyy-MM-dd' }}</td>
+            <td>{{ f.duration +' '+ min1 }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<br><br>
+<div class="container" style="margin-left: 500px;">
+    <a class="btn btn-dark" href="payment" role="button">Proceed To Payment</a>
+</div>
